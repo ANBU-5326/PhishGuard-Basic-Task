@@ -1,16 +1,4 @@
-# ==========================================
-# PhishGuard Basic Prototype
-# Simple Phishing Detection Tool
-# ==========================================
-
-
-# -------------------------------
-# Task 1: Email Risk Checker
-# -------------------------------
-
 def check_email_risk(email_text):
-
-    # List of risky phishing keywords
     risky_words = ["urgent", "verify", "password", "bank", "click"]
 
     email_text = email_text.lower()
@@ -20,12 +8,6 @@ def check_email_risk(email_text):
             return "Warning: This email may be risky"
 
     return "This email looks safe"
-
-
-# -------------------------------
-# Task 2: Domain Similarity Check
-# -------------------------------
-
 def normalize_domain(domain):
     """
     Replace common phishing character tricks
@@ -55,18 +37,10 @@ def check_domain(domain1, domain2):
 
     if d1 == d2:
         return "Suspicious domain"
-
-    # Check if main part of domain is similar
     if d1.split(".")[0] == d2.split(".")[0]:
         return "Suspicious domain"
 
     return "Domain looks safe"
-
-
-# -------------------------------
-# Main Program
-# -------------------------------
-
 def main():
 
     print("=================================")
